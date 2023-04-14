@@ -1,0 +1,12 @@
+CREATE TABLE Billeter
+(
+    id INTEGER AUTO_INCREMENT NOT NULL,
+    valg VARCHAR(255) NOT NULL,
+    antall INTEGER,
+    fornavn VARCHAR(255) NOT NULL,
+    etternavn VARCHAR(255) NOT NULL,
+    telfoonr VARCHAR(255) NOT NULL,
+    epost VARCHAR(255) NOT NULL,
+PRIMARY KEY (id)
+
+);

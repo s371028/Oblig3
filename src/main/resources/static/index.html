@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig3</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="Oblig3.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Bestilling av kinobilletter</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="velgFilm">Velg film</label>
+
+                    <select id="velgFilm">
+                        <option value="">Velg film her</option>
+
+                        <option value="Jente med mannsmot">Jente med mannsmot</option>
+                        <option value="Kistin GifteKniv">Kistin GifteKniv</option>
+                        <option value="Den 12. mann">Den 12. mann</option>
+                        <option value="Snø Mannen">Snø Mannen</option>
+                        <option value="Troll">Troll</option>
+                        <option value="Torden">Torden</option>
+                        <option value="Flukt">Flukt</option>
+                        <option value="Utøya 22.juli">Utøya 22.juli</option>
+                        <option value="Bølgen">Bølgen</option>
+                        <option value="Spionen">Spionen</option>
+                        <option value="Kniv">Kniv</option>
+
+                    </select>
+                    <span id="feilvalg" style="color: red"> </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="tall">Antall</label>
+                    <input type="text" class="form-control" size="1px" id="tall">
+                    <span id="feilTall" class="feil" style="color: red"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="forNavn">Fornavn</label>
+                    <input type="text" class="form-control"  id="forNavn">
+                    <span id="feilNavn" class="feil" style="color: red"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="etterNavn">Etternavn</label>
+                    <input type="text" class="form-control"  id="etterNavn">
+                    <span  id="feilEtterNavn" class="feil" style="color: red"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telfonnr"> Telfonnr</label>
+                    <input type="text" class="form-control"  id="telfonnr">
+                    <span id="feilTelfon" class="feil" style="color: red"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="epost"> Epost</label>
+                    <input type="text" class="form-control"  id="epost">
+                    <span id="feilEpost" class="feil" style="color: red"></span>
+                </div>
+
+            </form>
+
+            <button class="btn btn-primary" id="kjøp" onclick="kjopBilleter()">Kjop billet</button><br/>
+
+        </div>
+
+        <div class="cil-md-8">
+            <h1>Alle Billeter</h1>
+            <div id="KjopBilett" class="table"></div>
+
+            <button class="btn btn-danger"  onclick="SlettAlleBillet()">Slett Alle Billetene</button>
+            <div id="slett" ></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
